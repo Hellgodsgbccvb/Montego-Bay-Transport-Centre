@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Montego Bay Transport Centre – Driver Entry</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #0f766e;
+      --secondary: #14b8a6;
+      --bg: #f0fdfa;
+      --dark: #134e4a;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, var(--bg), #ffffff);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 900px;
+      background: #ffffff;
+      border-radius: 20px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      overflow: hidden;
+    }
+
+    .info {
+      background: linear-gradient(160deg, var(--primary), var(--secondary));
+      color: #ffffff;
+      padding: 40px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .info h1 {
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
+
+    .info p {
+      opacity: 0.9;
+      line-height: 1.6;
+    }
+
+    .zones {
+      margin-top: 30px;
+      background: rgba(255,255,255,0.15);
+      padding: 20px;
+      border-radius: 12px;
+    }
+
+    .zones h3 {
+      margin-top: 0;
+      font-size: 18px;
+    }
+
+    .zones ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .zones li {
+      display: flex;
+      justify-content: space-between;
+      font-size: 14px;
+      padding: 6px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.2);
+    }
+
+    .form {
+      padding: 40px;
+    }
+
+    .form h2 {
+      margin-top: 0;
+      color: var(--dark);
+    }
+
+    label {
+      font-size: 14px;
+      font-weight: 500;
+      display: block;
+      margin-top: 15px;
+      color: #334155;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 12px 14px;
+      margin-top: 6px;
+      border-radius: 10px;
+      border: 1px solid #cbd5f5;
+      font-family: inherit;
+      font-size: 14px;
+    }
+
+    input:focus, select:focus {
+      outline: none;
+      border-color: var(--secondary);
+      box-shadow: 0 0 0 3px rgba(20,184,166,0.2);
+    }
+
+    button {
+      margin-top: 25px;
+      width: 100%;
+      padding: 14px;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      color: white;
+      border: none;
+      border-radius: 12px;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+    }
+
+    @media (max-width: 800px) {
+      .container {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="info">
+      <h1>Montego Bay Transport Centre</h1>
+      <p>Official entry registration portal for bus and taxi operators. Sign up below to gain access to the bus park and be assigned to an available zone.</p>
+
+      <div class="zones">
+        <h3>Bus Park Zones & Capacity</h3>
+        <ul>
+          <li><span>Zone A</span><span>75 entries</span></li>
+          <li><span>Zone B</span><span>120 entries</span></li>
+          <li><span>Zone C</span><span>170 entries</span></li>
+          <li><span>Zone D</span><span>200 entries</span></li>
+          <li><span>Zone E</span><span>250 entries</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="form">
+      <h2>Driver Sign‑Up</h2>
+
+      <form>
+        <label>Driver Full Name</label>
+        <input type="text" placeholder="Enter full name" required />
+
+        <label>Vehicle Type</label>
+        <select required>
+          <option value="">Select vehicle type</option>
+          <option>Route Taxi</option>
+          <option>Charter Taxi</option>
+          <option>Mini Bus</option>
+          <option>Coach Bus</option>
+        </select>
+
+        <label>Vehicle Plate Number</label>
+        <input type="text" placeholder="e.g. PP 1234" required />
+
+        <label>Preferred Zone</label>
+        <select required>
+          <option value="">Select zone</option>
+          <option>Zone A</option>
+          <option>Zone B</option>
+          <option>Zone C</option>
+          <option>Zone D</option>
+          <option>Zone E</option>
+        </select>
+
+        <button type="submit">Register & Enter Bus Park</button>
+      </form>
+    </div>
+  </div>
+
+</body>
+</html>
